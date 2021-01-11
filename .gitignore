@@ -1,0 +1,12 @@
+node_modules/
+.idea/
+.mta/
+*.mtar
+dist/
+package-lock.json
+mta_archives/
+deployer/resources/
+Makefile*
+mta-*
+approuter/*/webapp/
+*.DS_Store
