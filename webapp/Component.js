@@ -7,10 +7,10 @@ sap.ui.define([
   // Provides a shim for the lodash library
   sap.ui.loader.config({
     paths: {
-      "custom/lodash": "https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min"
+      "custom/Lodash": "https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min"
     },
     shim: {
-      "custom/lodash": {
+      "custom/Lodash": {
         amd: true,
         exports: "_"
       }

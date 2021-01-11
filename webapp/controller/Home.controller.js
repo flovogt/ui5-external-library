@@ -3,8 +3,8 @@ sap.ui.define([
   "sap/m/Dialog",
   "sap/m/Button",
   "sap/m/Text",
-  "custom/lodash"
-], function (Controller, Dialog, Button, Text, lodash) {
+  "custom/Lodash"
+], function (Controller, Dialog, Button, Text, Lodash) {
   "use strict";
 
   return Controller.extend("com.ui5.test.ui5ExternalLibrary.controller.Home", {
@@ -12,7 +12,7 @@ sap.ui.define([
     onInit: function () {
 
       // call the thirdparty module via the path mapping
-      var iResult1 = lodash.divide(10, 2);
+      var iResult1 = Lodash.divide(10, 2);
 
       // call the thirdparty module via the global namespace
       var iResult2 = _.divide(10, 2);

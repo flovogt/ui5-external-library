@@ -7,10 +7,10 @@ The magic happens in [Component.js](webapp/Component.js) where you have to confi
   // Provides a shim for the lodash library
   sap.ui.loader.config({
     paths: {
-      "custom/lodash": "https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min"
+      "custom/Lodash": "https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min"
     },
     shim: {
-      "custom/lodash": {
+      "custom/Lodash": {
         amd: true,
         exports: "_"
       }
@@ -23,8 +23,8 @@ Then you can use the external javascript library like you know it already from o
 ```javascript
 sap.ui.define([
   "sap/ui/core/mvc/Controller",
-  "custom/lodash"
-], function (Controller, lodash) {
+  "custom/Lodash"
+], function (Controller, Lodash) {
   "use strict";
 
   return Controller.extend("com.ui5.test.ui5ExternalLibrary.controller.Home", {
@@ -32,7 +32,7 @@ sap.ui.define([
     onInit: function () {
 
       // call the thirdparty module via the path mapping
-      var iResult1 = lodash.divide(10, 2);
+      var iResult1 = Lodash.divide(10, 2);
 
       // call the thirdparty module via the global namespace
       var iResult2 = _.divide(10, 2);
