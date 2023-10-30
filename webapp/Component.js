@@ -1,21 +1,21 @@
+// Provides a shim for the lodash library
+sap.ui.loader.config({
+  paths: {
+    "custom/Lodash": "https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min"
+  },
+  shim: {
+    "custom/Lodash": {
+      amd: true,
+      exports: "_"
+    }
+  }
+});
+
 sap.ui.define([
   "sap/ui/core/UIComponent",
   "com/ui5/test/ui5ExternalLibrary/model/models"
 ], function (UIComponent, models) {
   "use strict";
-
-  // Provides a shim for the lodash library
-  sap.ui.loader.config({
-    paths: {
-      "custom/Lodash": "https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min"
-    },
-    shim: {
-      "custom/Lodash": {
-        amd: true,
-        exports: "_"
-      }
-    }
-  });
 
   return UIComponent.extend("com.ui5.test.ui5ExternalLibrary.Component", {
 
